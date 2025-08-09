@@ -19,6 +19,11 @@ class Node:
     def __repr__(self):
         return f"Node_{self.name}"
 
+class Connection:
+    def __init__(self, connection_str:str):
+        self.in_node = connection_str.split('->')[0]
+        self.out_node = connection_str.split('->')[1]
+
 Node("m")
 Node("k")
 
